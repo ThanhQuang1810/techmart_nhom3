@@ -20,7 +20,7 @@ function nav_active(array $pages, string $currentScript): string
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= e($title) ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="<?= url('css/shared.css') ?>" />
+<link rel="stylesheet" href="<?= url('css/shared.css') ?>?v=999" />
     <?php foreach ($extraCss as $cssFile): ?>
       <link rel="stylesheet" href="<?= url($cssFile) ?>" />
     <?php endforeach; ?>
@@ -48,14 +48,14 @@ function nav_active(array $pages, string $currentScript): string
                 <span>Admin</span>
               </a>
             <?php endif; ?>
-          <a href="<?= url('profile.php') ?>" class="action-link" style="display:flex;align-items:center;gap:8px;">
+            <a href="<?= url('profile.php') ?>" class="action-link" style="display:flex;align-items:center;gap:8px;">
   <img
     src="<?= url(!empty($user['avatar']) ? $user['avatar'] : 'assets/images/avatar.jpg') ?>"
     alt="Avatar"
     style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #ddd;"
   >
   <span><?= e($user['name']) ?></span>
-
+</a>
             <a href="<?= url('logout.php') ?>" class="action-link">
               <i class="fa-solid fa-right-from-bracket"></i>
               <span>Đăng xuất</span>
