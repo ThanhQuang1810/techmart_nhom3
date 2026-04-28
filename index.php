@@ -31,73 +31,70 @@ require __DIR__ . '/includes/header.php';
     padding: 48px 40px;
     margin-bottom: 24px;
     background: linear-gradient(135deg, #eaf4ff 0%, #f0f7ff 50%, #e8f0fe 100%);
-    position: relative;
-    overflow: hidden;
 ">
-  <!-- Hình trang trí nền -->
-  <div style="position:absolute;top:-60px;right:-60px;width:300px;height:300px;
-              background:radial-gradient(circle,rgba(26,148,255,0.12),transparent 70%);
-              border-radius:50%;pointer-events:none;"></div>
-  <div style="position:absolute;bottom:-40px;left:30%;width:200px;height:200px;
-              background:radial-gradient(circle,rgba(91,95,248,0.08),transparent 70%);
-              border-radius:50%;pointer-events:none;"></div>
 
-  <div style="position:relative;z-index:1;max-width:620px;">
-    <!-- Badge -->
-    <div style="display:inline-flex;align-items:center;gap:8px;
-                background:rgba(26,148,255,0.1);border:1px solid rgba(26,148,255,0.2);
-                border-radius:999px;padding:6px 16px;margin-bottom:18px;">
-      <span style="width:8px;height:8px;background:#1a94ff;border-radius:50%;
-                   animation:pulse 2s infinite;display:inline-block;"></span>
-      <span style="font-size:13px;font-weight:700;color:#1a94ff;">
-        🛒 Mua sắm công nghệ #1 Việt Nam
-      </span>
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+
+    <!-- LEFT CONTENT -->
+    <div style="max-width:600px;">
+      
+      <div style="display:inline-flex;align-items:center;gap:8px;
+                  background:rgba(26,148,255,0.1);
+                  border-radius:999px;padding:6px 16px;margin-bottom:18px;">
+        <span style="width:8px;height:8px;background:#1a94ff;border-radius:50%;"></span>
+        <span style="font-size:13px;font-weight:700;color:#1a94ff;">
+          🛒 Mua sắm công nghệ #1 Việt Nam
+        </span>
+      </div>
+
+      <h1 style="font-size:42px;font-weight:800;line-height:1.15;margin-bottom:14px;">
+        TechMart –<br>
+        <span style="background:linear-gradient(135deg,#1a94ff,#5b5ff8);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+          Công nghệ đỉnh cao,
+        </span><br>
+        giá cả hợp lý
+      </h1>
+
+      <p style="font-size:16px;color:#6b7280;margin-bottom:24px;line-height:1.7;">
+        Hàng ngàn sản phẩm chính hãng — điện thoại, laptop, phụ kiện.<br>
+        Giao hàng nhanh · Đổi trả dễ dàng · Bảo hành chính hãng.
+      </p>
+
+      <div style="display:flex;gap:24px;margin-bottom:28px;">
+        <div>
+          <div style="font-size:22px;font-weight:800;color:#1a94ff;">500+</div>
+          <div style="font-size:12px;color:#9ca3af;">Sản phẩm</div>
+        </div>
+        <div>
+          <div style="font-size:22px;font-weight:800;color:#1a94ff;">10K+</div>
+          <div style="font-size:12px;color:#9ca3af;">Khách hàng</div>
+        </div>
+        <div>
+          <div style="font-size:22px;font-weight:800;color:#1a94ff;">4.9★</div>
+          <div style="font-size:12px;color:#9ca3af;">Đánh giá</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;">
+        <a class="btn btn-primary" href="<?= url('category.php') ?>">
+          🛍️ Mua sắm ngay
+        </a>
+        <a class="btn btn-outline" href="<?= url('about.php') ?>">
+          Tìm hiểu thêm
+        </a>
+      </div>
+
     </div>
 
-    <h1 style="font-size:42px;font-weight:800;line-height:1.15;
-               margin-bottom:14px;letter-spacing:-0.5px;">
-      TechMart –<br>
-      <span style="background:linear-gradient(135deg,#1a94ff,#5b5ff8);
-                   -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
-        Công nghệ đỉnh cao,
-      </span><br>
-      giá cả hợp lý
-    </h1>
-
-    <p style="font-size:16px;color:#6b7280;margin-bottom:24px;line-height:1.7;">
-      Hàng ngàn sản phẩm chính hãng — điện thoại, laptop, phụ kiện.<br>
-      Giao hàng nhanh · Đổi trả dễ dàng · Bảo hành chính hãng.
-    </p>
-
-    <!-- Số liệu nhanh -->
-    <div style="display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
-      <div style="text-align:center;">
-        <div style="font-size:22px;font-weight:800;color:#1a94ff;">500+</div>
-        <div style="font-size:12px;color:#9ca3af;">Sản phẩm</div>
-      </div>
-      <div style="width:1px;background:#e5e7eb;"></div>
-      <div style="text-align:center;">
-        <div style="font-size:22px;font-weight:800;color:#1a94ff;">10K+</div>
-        <div style="font-size:12px;color:#9ca3af;">Khách hàng</div>
-      </div>
-      <div style="width:1px;background:#e5e7eb;"></div>
-      <div style="text-align:center;">
-        <div style="font-size:22px;font-weight:800;color:#1a94ff;">4.9★</div>
-        <div style="font-size:12px;color:#9ca3af;">Đánh giá</div>
-      </div>
+    <!-- RIGHT IMAGE -->
+    <div>
+     <img src="<?= url('assets/images/gadget.png') ?>" 
+     style="width:450px;">
     </div>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a class="btn btn-primary" href="<?= url('category.php') ?>"
-         style="padding:14px 28px;font-size:15px;">
-        🛍️ Mua sắm ngay
-      </a>
-      <a class="btn btn-outline" href="<?= url('about.php') ?>"
-         style="padding:14px 28px;font-size:15px;">
-        Tìm hiểu thêm
-      </a>
-    </div>
   </div>
+
 </section>
 
 <style>
